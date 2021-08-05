@@ -1,0 +1,27 @@
+.Figuras {
+  margin: 0 0 50rem;
+  height: 10rem;
+  /* Asignando los elementos dentro del div de Figuras en una caja*/
+  display: flex;
+  /* Separacion de los elementos dentro del div de Figuras*/
+  justify-content: space-around;
+}
+
+.Info {
+  font-size: 30px;
+  text-align: justify;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.cuerpo {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.SeccionRes {
+  font-size: 30px;
+  text-align: justify;
+  margin-left: 30px;
+  margin-right: 30px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/main.css" />
+    <h1 align="center" style="font-family: cursive; font-size: 45px">
+      Detalles Octaedro
+    </h1>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalles Octaedro</title>
+  </head>
+
+  <body class="cuerpo" background="imagenes/fondo3.jpg">
+    <div class="Info">
+      <h2>¿Que es?</h2>
+      <p>
+        El octaedro es un poliedro, o figura geométrica tridimensional, con ocho
+        caras o lados, cada uno de los cuales es un polígono. Si las ocho caras
+        del octaedro son triángulos equiláteros, iguales entre sí, el octaedro
+        es convexo y se denomina regular
+      </p>
+      <p>
+        A continuacion, puedes calcular el area y volumen de un octaedro solo
+        insertando la medida de un arista o "a" como muestra la imagen:
+      </p>
+    </div>
+    <img src="imagenes/octaedroAri.png" width="300px" height="350px" />
+
+    <br />
+
+    <div class="SeccionRes">
+      <form>
+        <label for="Arista">Medida de la arista</label>
+        <input id="Arista" type="number" />
+        <input type="button" onclick="calcular()" value="Calcular" />
+        <br />
+        <label for="Area">Area = </label>
+        <p id="Area"></p>
+
+        <label for="Volumen">Volumen =</label>
+        <p id="Volumen"></p>
+      </form>
+    </div>
+
+    <!--Funcion para hacer los calculos-->
+    <script>
+      function calcular() {
+        let Arista = document.getElementById("Arista").value;
+        if (Arista < 1) {
+          alert("Medida mayor a 0 por favor");
+        } else {
+          let AreaRes = 2 * Math.pow(Arista, 2) * Math.sqrt(3);
+          let VoluRes = (Math.pow(Arista, 3) * Math.sqrt(2)) / 3;
+          document.getElementById("Area").innerHTML = AreaRes;
+          document.getElementById("Volumen").innerHTML = VoluRes;
+        }
+      }
+    </script>
+
+    <a href="index.html"
+      ><button
+        style="position: absolute; left: 40px; width: 100px; height: 60px"
+      >
+        Regresar
+      </button></a
+    >
+
+    <br /><br /><br />
+  </body>
+</html>
